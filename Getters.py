@@ -28,7 +28,7 @@ def getMenuOption(debug = False):
     
     
 def getWord(prompt, debug = False):
-    if debug: print("getMenuOption Function")
+    if debug: print("getWord Function")
 
     goodInput = False
 
@@ -42,6 +42,74 @@ def getWord(prompt, debug = False):
             
     return word
 
+def getSport(prompt, debug = False):
+    if debug: print("getSport Function")
+    
+    sports = ["soccer",
+              "football",
+              "hockey",
+              "basketball"
+              "tennis",
+              "volleyball",
+              "foot ball",
+              "basket ball",
+              "volley ball",
+              "baseball",
+              "base ball",
+              "cricket",
+              "badminton",
+              "catch",]
+    
+    goodInput = False
+
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't cuss")
+        elif word.lower() not in sports:
+            goodInput = False
+            print("Please pick an actual sport or check your spelling")
+    return word
+            
+def getSport2(prompt, debug = False):
+    if debug: print("getSport2 Function")
+    
+    sports2 = ["soccer",
+              "football",
+              "hockey",
+              "basketball"
+              "tennis",
+              "volleyball",
+              "foot ball",
+              "basket ball",
+              "volley ball",
+              "baseball",
+              "base ball",
+              "cricket",
+              "badminton",
+              "catch",
+              "track",
+              "cross country",
+              "wrestling",
+              "boxing",
+              "running",
+              "golf",]
+    
+    goodInput = False
+
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't cuss")
+        elif word.lower() not in sports2:
+            goodInput = False
+            print("Please pick an actual sport or check your spelling")
+    return word
+    
 def isSwear(word, debug = False):
     if debug: print("in isSwear Function", word)
     if word in swearList:
@@ -60,4 +128,8 @@ swearList = ["fuck",
             "pussy",
             "cunt",
             "fag",
+            "sex",
+            "whore",
+            "hoe",
+            "slut",
             ]

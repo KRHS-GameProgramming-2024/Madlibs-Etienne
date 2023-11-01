@@ -20,6 +20,7 @@ def Madlibs (debug = False):
             
         elif choice == "1":
             print(Story1(debug))
+            print("\n")
             input("Press enter to continue.")
 
 
